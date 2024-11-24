@@ -1,0 +1,8 @@
+RK3588是一款低功耗、高性能的处理器，适用于基于arm的PC和Edge计算设备、个人移动互联网设备等数字多媒体应用，
+RK3588支持8K视频编解码，内置GPU可以完全兼容OpenGLES 1.1、2.0和3.2。
+RK3588引入了新一代完全基于硬件的最大4800万像素ISP，内置NPU，支持INT4/INT8/INT16/FP16混合运算能力，
+支持安卓12和、Debian11、Build root、Ubuntu20和22版本系统。了解更多信息可点击迅为官网   
+
+
+第三章 Buildroot系统功能测试
+烧写buildroot系统镜像，buildroot系统镜像在网盘资料“iTOP-3588开发板\01_【iTOP-RK3588开发板】基础资料\06_iTOP-RK3588开发板Linux镜像\01_Buildroot镜像”目录下，本小节测试buildroot系统。

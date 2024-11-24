@@ -1,0 +1,262 @@
+tza@WP:~/rk3588/3588-linux$ ./build.sh recovery
+processing option: recovery
+==========Start building recovery(buildroot)==========
+TARGET_RECOVERY_CONFIG=rockchip_rk3588_recovery
+========================================
+Top of tree: /home/tza/rk3588/3588-linux
+===========================================
+
+#TARGET_BOARD=rk3588
+#OUTPUT_DIR=output/rockchip_rk3588_recovery
+#CONFIG=rockchip_rk3588_recovery_defconfig
+
+===========================================
+make: Entering directory '/home/tza/rk3588/3588-linux/buildroot'
+mkdir -p /home/tza/rk3588/3588-linux/buildroot/output/rockchip_rk3588_recovery/build/buildroot-config/lxdialog
+PKG_CONFIG_PATH="/opt/ros/noetic/lib/pkgconfig:/opt/ros/noetic/lib/x86_64-linux-gnu/pkgconfig" make CC="/usr/bin/gcc" HOSTCC="/usr/bin/gcc" \
+    obj=/home/tza/rk3588/3588-linux/buildroot/output/rockchip_rk3588_recovery/build/buildroot-config -C support/kconfig -f Makefile.br conf
+/usr/bin/gcc -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -DCURSES_LOC="<ncurses.h>" -DNCURSES_WIDECHAR=1 -DLOCALE  -I/home/tza/rk3588/3588-linux/buildroot/output/rockchip_rk3588_recovery/build/buildroot-config -DCONFIG_=\"\"  -MM *.c > /home/tza/rk3588/3588-linux/buildroot/output/rockchip_rk3588_recovery/build/buildroot-config/.depend 2>/dev/null || :
+/usr/bin/gcc -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -DCURSES_LOC="<ncurses.h>" -DNCURSES_WIDECHAR=1 -DLOCALE  -I/home/tza/rk3588/3588-linux/buildroot/output/rockchip_rk3588_recovery/build/buildroot-config -DCONFIG_=\"\"   -c conf.c -o /home/tza/rk3588/3588-linux/buildroot/output/rockchip_rk3588_recovery/build/buildroot-config/conf.o
+/usr/bin/gcc -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -DCURSES_LOC="<ncurses.h>" -DNCURSES_WIDECHAR=1 -DLOCALE  -I/home/tza/rk3588/3588-linux/buildroot/output/rockchip_rk3588_recovery/build/buildroot-config -DCONFIG_=\"\"  -I. -c /home/tza/rk3588/3588-linux/buildroot/output/rockchip_rk3588_recovery/build/buildroot-config/zconf.tab.c -o /home/tza/rk3588/3588-linux/buildroot/output/rockchip_rk3588_recovery/build/buildroot-config/zconf.tab.o
+/usr/bin/gcc -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -DCURSES_LOC="<ncurses.h>" -DNCURSES_WIDECHAR=1 -DLOCALE  -I/home/tza/rk3588/3588-linux/buildroot/output/rockchip_rk3588_recovery/build/buildroot-config -DCONFIG_=\"\"   /home/tza/rk3588/3588-linux/buildroot/output/rockchip_rk3588_recovery/build/buildroot-config/conf.o /home/tza/rk3588/3588-linux/buildroot/output/rockchip_rk3588_recovery/build/buildroot-config/zconf.tab.o  -o /home/tza/rk3588/3588-linux/buildroot/output/rockchip_rk3588_recovery/build/buildroot-config/conf
+rm /home/tza/rk3588/3588-linux/buildroot/output/rockchip_rk3588_recovery/build/buildroot-config/zconf.tab.c
+  GEN     /home/tza/rk3588/3588-linux/buildroot/output/rockchip_rk3588_recovery/Makefile
+/home/tza/rk3588/3588-linux/buildroot/build/parse_defconfig.sh /home/tza/rk3588/3588-linux/buildroot/configs/rockchip_rk3588_recovery_defconfig /home/tza/rk3588/3588-linux/buildroot/output/rockchip_rk3588_recovery/.config.in
+Parsing defconfig: /home/tza/rk3588/3588-linux/buildroot/configs/rockchip_rk3588_recovery_defconfig
+Using configs/rockchip/base/kernel.config as base
+Merging configs/rockchip/e2fs.config
+Merging configs/rockchip/base/common.config
+Merging configs/rockchip/base/base.config
+Merging configs/rockchip/base/kernel.config
+Merging configs/rockchip/e2fs.config
+Merging configs/rockchip/base/common.config
+Merging configs/rockchip/vfat.config
+Merging configs/rockchip/base/recovery.config
+Value of BR2_ROOTFS_OVERLAY is redefined by configs/rockchip/base/recovery.config:
+Previous value:	BR2_ROOTFS_OVERLAY="board/rockchip/common/base"
+Modify value:	BR2_ROOTFS_OVERLAY+="board/rockchip/common/recovery"
+New value:	BR2_ROOTFS_OVERLAY="board/rockchip/common/base board/rockchip/common/recovery"
+
+Merging configs/rockchip/chips/rk3588.config
+Value of BR2_ROOTFS_OVERLAY is redefined by configs/rockchip/chips/rk3588.config:
+Previous value:	BR2_ROOTFS_OVERLAY="board/rockchip/common/base board/rockchip/common/recovery"
+Modify value:	BR2_ROOTFS_OVERLAY+="board/rockchip/rk3588/fs-overlay/"
+New value:	BR2_ROOTFS_OVERLAY="board/rockchip/common/base board/rockchip/common/recovery board/rockchip/rk3588/fs-overlay/"
+
+Merging configs/rockchip/chips/rk3588_aarch64.config
+Merging /home/tza/rk3588/3588-linux/buildroot/configs/rockchip_rk3588_recovery_defconfig
+#
+# merged configuration written to /home/tza/rk3588/3588-linux/buildroot/output/rockchip_rk3588_recovery/.config.in (needs make)
+#
+BR2_DEFCONFIG='' KCONFIG_AUTOCONFIG=/home/tza/rk3588/3588-linux/buildroot/output/rockchip_rk3588_recovery/build/buildroot-config/auto.conf KCONFIG_AUTOHEADER=/home/tza/rk3588/3588-linux/buildroot/output/rockchip_rk3588_recovery/build/buildroot-config/autoconf.h KCONFIG_TRISTATE=/home/tza/rk3588/3588-linux/buildroot/output/rockchip_rk3588_recovery/build/buildroot-config/tristate.config BR2_CONFIG=/home/tza/rk3588/3588-linux/buildroot/output/rockchip_rk3588_recovery/.config HOST_GCC_VERSION="9" BASE_DIR=/home/tza/rk3588/3588-linux/buildroot/output/rockchip_rk3588_recovery SKIP_LEGACY= CUSTOM_KERNEL_VERSION="5.10" BR2_DEFCONFIG=/home/tza/rk3588/3588-linux/buildroot/configs/rockchip_rk3588_recovery_defconfig /home/tza/rk3588/3588-linux/buildroot/output/rockchip_rk3588_recovery/build/buildroot-config/conf --defconfig=/home/tza/rk3588/3588-linux/buildroot/output/rockchip_rk3588_recovery/.config.in Config.in
+#
+# configuration written to /home/tza/rk3588/3588-linux/buildroot/output/rockchip_rk3588_recovery/.config
+#
+make: Leaving directory '/home/tza/rk3588/3588-linux/buildroot'
+2024-11-24T23:07:00 >>> host-skeleton  Extracting
+2024-11-24T23:07:00 >>> host-skeleton  Patching
+2024-11-24T23:07:00 >>> host-skeleton  Configuring
+2024-11-24T23:07:00 >>> host-skeleton  Building
+2024-11-24T23:07:00 >>> host-skeleton  Installing to host directory
+2024-11-24T23:07:00 >>> host-ccache 3.7.12 Extracting
+2024-11-24T23:07:00 >>> host-ccache 3.7.12 Patching
+2024-11-24T23:07:00 >>> host-ccache 3.7.12 Updating config.sub and config.guess
+2024-11-24T23:07:00 >>> host-ccache 3.7.12 Patching libtool
+2024-11-24T23:07:00 >>> host-ccache 3.7.12 Configuring
+2024-11-24T23:07:01 >>> host-ccache 3.7.12 Building
+2024-11-24T23:07:02 >>> host-ccache 3.7.12 Installing to host directory
+2024-11-24T23:07:02 >>> host-attr 2.5.1 Extracting
+2024-11-24T23:07:02 >>> host-attr 2.5.1 Patching
+2024-11-24T23:07:02 >>> host-attr 2.5.1 Updating config.sub and config.guess
+2024-11-24T23:07:02 >>> host-attr 2.5.1 Patching libtool
+2024-11-24T23:07:02 >>> host-attr 2.5.1 Configuring
+2024-11-24T23:07:03 >>> host-attr 2.5.1 Building
+2024-11-24T23:07:03 >>> host-attr 2.5.1 Installing to host directory
+2024-11-24T23:07:04 >>> host-acl 2.3.1 Extracting
+2024-11-24T23:07:04 >>> host-acl 2.3.1 Patching
+2024-11-24T23:07:04 >>> host-acl 2.3.1 Updating config.sub and config.guess
+2024-11-24T23:07:04 >>> host-acl 2.3.1 Patching libtool
+2024-11-24T23:07:04 >>> host-acl 2.3.1 Configuring
+2024-11-24T23:07:05 >>> host-acl 2.3.1 Building
+2024-11-24T23:07:06 >>> host-acl 2.3.1 Installing to host directory
+2024-11-24T23:07:06 >>> host-fakeroot 1.26 Extracting
+2024-11-24T23:07:06 >>> host-fakeroot 1.26 Patching
+2024-11-24T23:07:06 >>> host-fakeroot 1.26 Updating config.sub and config.guess
+2024-11-24T23:07:06 >>> host-fakeroot 1.26 Patching libtool
+2024-11-24T23:07:06 >>> host-fakeroot 1.26 Configuring
+2024-11-24T23:07:08 >>> host-fakeroot 1.26 Building
+2024-11-24T23:07:08 >>> host-fakeroot 1.26 Installing to host directory
+2024-11-24T23:07:09 >>> host-makedevs  Extracting
+2024-11-24T23:07:09 >>> host-makedevs  Patching
+2024-11-24T23:07:09 >>> host-makedevs  Configuring
+2024-11-24T23:07:09 >>> host-makedevs  Building
+2024-11-24T23:07:09 >>> host-makedevs  Installing to host directory
+2024-11-24T23:07:09 >>> host-mkpasswd  Extracting
+2024-11-24T23:07:09 >>> host-mkpasswd  Patching
+2024-11-24T23:07:09 >>> host-mkpasswd  Configuring
+2024-11-24T23:07:09 >>> host-mkpasswd  Building
+2024-11-24T23:07:09 >>> host-mkpasswd  Installing to host directory
+2024-11-24T23:07:09 >>> host-m4 1.4.19 Extracting
+2024-11-24T23:07:09 >>> host-m4 1.4.19 Patching
+2024-11-24T23:07:09 >>> host-m4 1.4.19 Updating config.sub and config.guess
+2024-11-24T23:07:09 >>> host-m4 1.4.19 Patching libtool
+2024-11-24T23:07:09 >>> host-m4 1.4.19 Configuring
+2024-11-24T23:07:22 >>> host-m4 1.4.19 Building
+2024-11-24T23:07:22 >>> host-m4 1.4.19 Installing to host directory
+2024-11-24T23:07:23 >>> host-bison 3.8.2 Extracting
+2024-11-24T23:07:23 >>> host-bison 3.8.2 Patching
+2024-11-24T23:07:23 >>> host-bison 3.8.2 Updating config.sub and config.guess
+2024-11-24T23:07:23 >>> host-bison 3.8.2 Patching libtool
+2024-11-24T23:07:23 >>> host-bison 3.8.2 Configuring
+2024-11-24T23:07:33 >>> host-bison 3.8.2 Building
+2024-11-24T23:07:35 >>> host-bison 3.8.2 Installing to host directory
+2024-11-24T23:07:35 >>> host-gawk 5.1.0 Extracting
+2024-11-24T23:07:35 >>> host-gawk 5.1.0 Patching
+2024-11-24T23:07:35 >>> host-gawk 5.1.0 Updating config.sub and config.guess
+2024-11-24T23:07:35 >>> host-gawk 5.1.0 Patching libtool
+2024-11-24T23:07:35 >>> host-gawk 5.1.0 Configuring
+2024-11-24T23:07:40 >>> host-gawk 5.1.0 Building
+2024-11-24T23:07:40 >>> host-gawk 5.1.0 Installing to host directory
+2024-11-24T23:07:40 >>> host-binutils 2.37 Extracting
+2024-11-24T23:07:41 >>> host-binutils 2.37 Patching
+2024-11-24T23:07:41 >>> host-binutils 2.37 Updating config.sub and config.guess
+2024-11-24T23:07:41 >>> host-binutils 2.37 Patching libtool
+2024-11-24T23:07:42 >>> host-binutils 2.37 Configuring
+2024-11-24T23:07:42 >>> host-binutils 2.37 Building
+2024-11-24T23:07:51 >>> host-binutils 2.37 Installing to host directory
+2024-11-24T23:07:52 >>> host-gmp 6.2.1 Extracting
+2024-11-24T23:07:52 >>> host-gmp 6.2.1 Patching
+2024-11-24T23:07:52 >>> host-gmp 6.2.1 Updating config.sub and config.guess
+2024-11-24T23:07:52 >>> host-gmp 6.2.1 Patching libtool
+2024-11-24T23:07:52 >>> host-gmp 6.2.1 Configuring
+2024-11-24T23:07:57 >>> host-gmp 6.2.1 Building
+2024-11-24T23:08:00 >>> host-gmp 6.2.1 Installing to host directory
+2024-11-24T23:08:01 >>> host-mpfr 4.1.0 Extracting
+2024-11-24T23:08:01 >>> host-mpfr 4.1.0 Patching
+2024-11-24T23:08:01 >>> host-mpfr 4.1.0 Updating config.sub and config.guess
+2024-11-24T23:08:01 >>> host-mpfr 4.1.0 Patching libtool
+2024-11-24T23:08:01 >>> host-mpfr 4.1.0 Configuring
+2024-11-24T23:08:03 >>> host-mpfr 4.1.0 Building
+2024-11-24T23:08:05 >>> host-mpfr 4.1.0 Installing to host directory
+2024-11-24T23:08:05 >>> host-mpc 1.2.1 Extracting
+2024-11-24T23:08:05 >>> host-mpc 1.2.1 Patching
+2024-11-24T23:08:05 >>> host-mpc 1.2.1 Updating config.sub and config.guess
+2024-11-24T23:08:05 >>> host-mpc 1.2.1 Patching libtool
+2024-11-24T23:08:05 >>> host-mpc 1.2.1 Configuring
+2024-11-24T23:08:06 >>> host-mpc 1.2.1 Building
+2024-11-24T23:08:07 >>> host-mpc 1.2.1 Installing to host directory
+2024-11-24T23:08:07 >>> host-gcc-initial 11.3.0 Extracting
+2024-11-24T23:08:11 >>> host-gcc-initial 11.3.0 Patching
+2024-11-24T23:08:11 >>> host-gcc-initial 11.3.0 Updating config.sub and config.guess
+2024-11-24T23:08:11 >>> host-gcc-initial 11.3.0 Patching libtool
+2024-11-24T23:08:12 >>> host-gcc-initial 11.3.0 Configuring
+2024-11-24T23:08:13 >>> host-gcc-initial 11.3.0 Building
+Done in 1min 23s  (error code: 2)
+Failed to build /home/tza/rk3588/3588-linux/buildroot/output/rockchip_rk3588_recovery/.config:
+2024-11-24T23:08:17 checking whether /home/tza/rk3588/3588-linux/buildroot/output/rockchip_rk3588_recovery/host/bin/ccache /usr/bin/gcc supports -Wold-style-definition... yes
+2024-11-24T23:08:17 checking whether /home/tza/rk3588/3588-linux/buildroot/output/rockchip_rk3588_recovery/host/bin/ccache /usr/bin/gcc supports -Wc++-compat... yes
+2024-11-24T23:08:17 checking whether /home/tza/rk3588/3588-linux/buildroot/output/rockchip_rk3588_recovery/host/bin/ccache /usr/bin/gcc supports -pedantic -Wlong-long... yes
+2024-11-24T23:08:17 checking whether /home/tza/rk3588/3588-linux/buildroot/output/rockchip_rk3588_recovery/host/bin/ccache /usr/bin/gcc supports -fno-exceptions... yes
+2024-11-24T23:08:17 checking whether /home/tza/rk3588/3588-linux/buildroot/output/rockchip_rk3588_recovery/host/bin/ccache /usr/bin/gcc supports -fno-rtti... yes
+2024-11-24T23:08:17 checking dependency style of /home/tza/rk3588/3588-linux/buildroot/output/rockchip_rk3588_recovery/host/bin/ccache /usr/bin/g++... gcc3
+2024-11-24T23:08:17 checking whether time.h and sys/time.h may both be included... yes
+2024-11-24T23:08:17 checking whether string.h and strings.h may both be included... yes
+2024-11-24T23:08:17 checking locale.h usability... yes
+2024-11-24T23:08:17 checking locale.h presence... yes
+2024-11-24T23:08:17 checking for locale.h... yes
+2024-11-24T23:08:17 checking fcntl.h usability... yes
+2024-11-24T23:08:17 checking fcntl.h presence... yes
+2024-11-24T23:08:17 checking for fcntl.h... yes
+2024-11-24T23:08:17 checking limits.h usability... yes
+2024-11-24T23:08:17 checking limits.h presence... yes
+2024-11-24T23:08:17 checking for limits.h... yes
+2024-11-24T23:08:17 checking stddef.h usability... yes
+2024-11-24T23:08:17 checking stddef.h presence... yes
+2024-11-24T23:08:17 checking for stddef.h... yes
+2024-11-24T23:08:17 checking for stdlib.h... (cached) yes
+2024-11-24T23:08:17 checking for strings.h... (cached) yes
+2024-11-24T23:08:17 checking for string.h... (cached) yes
+2024-11-24T23:08:17 checking sys/file.h usability... yes
+2024-11-24T23:08:17 checking sys/file.h presence... yes
+2024-11-24T23:08:17 checking for sys/file.h... yes
+2024-11-24T23:08:17 checking for unistd.h... (cached) yes
+2024-11-24T23:08:17 checking whether byte ordering is bigendian... no
+2024-11-24T23:08:17 checking for an ANSI C-conforming const... yes
+2024-11-24T23:08:17 checking for inline... inline
+2024-11-24T23:08:17 checking for obstacks... yes
+2024-11-24T23:08:17 checking for off_t... yes
+2024-11-24T23:08:17 checking for size_t... yes
+2024-11-24T23:08:17 checking for ssize_t... yes
+2024-11-24T23:08:17 checking for uintptr_t... yes
+2024-11-24T23:08:17 checking for ptrdiff_t... yes
+2024-11-24T23:08:17 checking for uint64_t... yes
+2024-11-24T23:08:17 checking whether struct tm is in sys/time.h or time.h... time.h
+2024-11-24T23:08:17 checking size of int... 4
+2024-11-24T23:08:17 checking size of long... 8
+2024-11-24T23:08:17 checking for clearerr_unlocked... yes
+2024-11-24T23:08:17 checking for feof_unlocked... yes
+2024-11-24T23:08:17 checking for ferror_unlocked... yes
+2024-11-24T23:08:17 checking for fflush_unlocked... yes
+2024-11-24T23:08:17 checking for fgetc_unlocked... yes
+2024-11-24T23:08:17 checking for fgets_unlocked... yes
+2024-11-24T23:08:17 checking for fileno_unlocked... yes
+2024-11-24T23:08:17 checking for fprintf_unlocked... no
+2024-11-24T23:08:17 checking for fputc_unlocked... yes
+2024-11-24T23:08:17 checking for fputs_unlocked... yes
+2024-11-24T23:08:18 checking for fread_unlocked... yes
+2024-11-24T23:08:18 checking for fwrite_unlocked... yes
+2024-11-24T23:08:18 checking for getchar_unlocked... yes
+2024-11-24T23:08:18 checking for getc_unlocked... yes
+2024-11-24T23:08:18 checking for putchar_unlocked... yes
+2024-11-24T23:08:18 checking for putc_unlocked... yes
+2024-11-24T23:08:18 checking whether abort is declared... yes
+2024-11-24T23:08:18 checking whether asprintf is declared... yes
+2024-11-24T23:08:18 checking whether basename is declared... yes
+2024-11-24T23:08:18 checking whether errno is declared... no
+2024-11-24T23:08:18 checking whether getopt is declared... yes
+2024-11-24T23:08:18 checking whether vasprintf is declared... yes
+2024-11-24T23:08:18 checking whether clearerr_unlocked is declared... yes
+2024-11-24T23:08:18 checking whether feof_unlocked is declared... yes
+2024-11-24T23:08:18 checking whether ferror_unlocked is declared... yes
+2024-11-24T23:08:18 checking whether fflush_unlocked is declared... yes
+2024-11-24T23:08:18 checking whether fgetc_unlocked is declared... yes
+2024-11-24T23:08:18 checking whether fgets_unlocked is declared... yes
+2024-11-24T23:08:18 checking whether fileno_unlocked is declared... yes
+2024-11-24T23:08:18 checking whether fprintf_unlocked is declared... no
+2024-11-24T23:08:18 checking whether fputc_unlocked is declared... yes
+2024-11-24T23:08:18 checking whether fputs_unlocked is declared... yes
+2024-11-24T23:08:18 checking whether fread_unlocked is declared... yes
+2024-11-24T23:08:18 checking whether fwrite_unlocked is declared... yes
+2024-11-24T23:08:18 checking whether getchar_unlocked is declared... yes
+2024-11-24T23:08:18 checking whether getc_unlocked is declared... yes
+2024-11-24T23:08:18 checking whether putchar_unlocked is declared... yes
+2024-11-24T23:08:18 checking whether putc_unlocked is declared... yes
+2024-11-24T23:08:18 checking for working alloca.h... yes
+2024-11-24T23:08:18 checking for alloca... yes
+2024-11-24T23:08:18 checking for ANSI C header files... (cached) yes
+2024-11-24T23:08:18 checking for nl_langinfo and CODESET... yes
+2024-11-24T23:08:18 checking whether NLS is requested... no
+2024-11-24T23:08:18 checking for uchar...
+2024-11-24T23:08:18 checking for ld used by GCC... /usr/bin/ld
+2024-11-24T23:08:18 checking if the linker (/usr/bin/ld) is GNU ld... yes
+2024-11-24T23:08:18 checking for shared library run path origin... done
+2024-11-24T23:08:18 checking for iconv... yes
+2024-11-24T23:08:18 checking for iconv declaration...
+2024-11-24T23:08:18 extern size_t iconv (iconv_t cd, char * *inbuf, size_t *inbytesleft, char * *outbuf, size_t *outbytesleft);
+2024-11-24T23:08:18 checking for CET support... yes
+2024-11-24T23:08:18 configure: updating cache ./config.cache
+2024-11-24T23:08:18 configure: creating ./config.status
+2024-11-24T23:08:18 config.status: creating Makefile
+2024-11-24T23:08:18 config.status: creating config.h
+2024-11-24T23:08:18 config.status: executing depdir commands
+2024-11-24T23:08:18 mkdir -p -- .deps
+2024-11-24T23:08:18 make[1]: *** [package/pkg-generic.mk:297: /home/tza/rk3588/3588-linux/buildroot/output/rockchip_rk3588_recovery/build/host-gcc-initial-11.3.0/.stamp_built] Error 2
+2024-11-24T23:08:18 make: *** [Makefile:88: _all] Error 2
+2024-11-24T23:08:18 make: Leaving directory '/home/tza/rk3588/3588-linux/buildroot'
+Please check details in /home/tza/rk3588/3588-linux/.recovery/br.log
+Command exited with non-zero status 1
+you take 1:23.95 to build recovery(buildroot)
+ERROR: Running build_recovery failed!
+ERROR: exit code 1 from line 1063:
+    /usr/bin/time -f "you take %E to build recovery(buildroot)" $COMMON_DIR/mk-buildroot.sh $RK_CFG_RECOVERY $DST_DIR
+
